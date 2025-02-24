@@ -1,20 +1,21 @@
-#Variant 23:
-#VN={S, B, C},
+#Variant 27:
+#VN={S, A, B},
 #VT={a, b, c},
 #P={
-#    S → aB
-#    B → aC
-#    C → bB
-#    C → c
-#   C → aS
-#    B → bB
+#   S → aA
+#   A → bS
+#   S → bB
+#   A → cA
+#   A → aB
+#   B → aB
+#   B → b
 #}
 class Grammar:
     def __init__ (self):
-        self.VN = {'S', 'B', 'C'}
+        self.VN = {'S', 'A', 'B'}
         self.VT = {'a', 'b', 'c'}
         self.P = {
-            'S': ['aB'],
-            'B': ['aC', 'bB'],
-            'C': ['bB', 'c', 'aS'],
+            'S': ['aA','bB'],
+            'B': ['aB', 'b'],
+            'A': ['cA', 'aB', 'bS'],
         }
