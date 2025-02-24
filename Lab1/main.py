@@ -1,6 +1,6 @@
 import random
-from grammar import Grammar
-from finiteAutomata import Finite_Automata
+from Lab1.grammar import Grammar
+from Lab1.finiteAutomata import Finite_Automata
 
 
 class Main:
