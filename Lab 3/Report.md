@@ -1,5 +1,6 @@
 # Lexer and Scanner
-
+### Author:Turcanu Vladislav
+---
 ## Overview
 
 &ensp;&ensp;&ensp; The term lexer comes from lexical analysis which, in turn, represents the process of extracting lexical tokens from a string of characters. There are several alternative names for the mechanism called lexer, for example tokenizer or scanner. The lexical analysis is one of the first stages used in a compiler/interpreter when dealing with programming, markup or other types of languages.
