@@ -13,6 +13,9 @@ TOKEN_VARIABLE = 'VARIABLE'
 TOKEN_ASSIGN = 'ASSIGN'
 TOKEN_FUNCTION = 'FUNCTION'
 TOKEN_EOF = 'EOF'
+TOKEN_TRIG_FUNCTION = 'TRIG_FUNCTION'
+TOKEN_TRIG_FUNCTION = 'TRIG_FUNCTION'
+
 
 # Regular expression patterns
 INTEGER_PATTERN = re.compile(r'\d+')
@@ -20,6 +23,7 @@ FLOAT_PATTERN = re.compile(r'[-+]?([0-9]*(\,|\.)[0-9]+|[0-9]+)')
 VARIABLE_PATTERN = re.compile(r'[a-zA-Z][a-zA-Z0-9_]*')
 FUNCTION_PATTERN = re.compile(r'[a-zA-Z][a-zA-Z0-9_]*\((?:(?:(?!\)).)*)\)')
 WHITESPACE_PATTERN = re.compile(r'\s+')
+TRIG_FUNCTIONS = ('sin', 'cos', 'tan', 'asin', 'acos', 'atan')
 
 
 class Token:

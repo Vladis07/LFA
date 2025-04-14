@@ -15,6 +15,18 @@ class Lexer:
         # If we've reached the end of the input text
         if self.pos >= len(text):
             return Token(TOKEN_EOF, None)
+        function_match = FUNCTION_PATTERN.match(text, self.pos)
+        if function_match:
+            function_str = function_match.group()
+            # Extracting function name and arguments
+            function_name, arguments = function_str.split('(', 1)
+            arguments = arguments[:-1]  # Removing the closing parenthesis
+            self.pos = function_match.end()
+
+            if function_name in TRIG_FUNCTIONS:
+                return Token(TOKEN_TRIG_FUNCTION, (function_name, arguments))
+            else:
+                return Token(TOKEN_FUNCTION, (function_name, arguments))
 
         function_match = FUNCTION_PATTERN.match(text, self.pos)
         if function_match:
@@ -70,6 +82,7 @@ class Lexer:
         if whitespace_match:
             self.pos = whitespace_match.end()
             return self.get_next_token()
+
 
     def tokenize(self):
         tokens = []
