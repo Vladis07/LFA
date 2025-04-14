@@ -1,4 +1,4 @@
-#Variant 23,
+#Variant 25,
 #Q = {q0,q1,q2},
 #∑ = {a,b},
 #F = {q2},
