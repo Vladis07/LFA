@@ -1,5 +1,5 @@
 # Report on Regular Expressions and String Generation
-
+### Author:Turcanu Vladislav
 ## Introduction
 
 Regular expressions (regex) are powerful tools used for pattern matching in strings. They provide a concise and flexible means to search, extract, and manipulate text based on specific patterns. Regular expressions consist of a sequence of characters and special metacharacters that define a search pattern.
